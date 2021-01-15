@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [query]);
   // console.log(images);
   return (
     <div className="App">

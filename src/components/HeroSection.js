@@ -58,18 +58,16 @@ const Header= styled.h2`
 `
 
 
-const HeroSection = ({setQuery,setImages}) => {
-  const [value, setValue] = useState("")
+const HeroSection = ({ setQuery, setImages}) => {
+  const [value, setValue] = useState("");
 
-  const formHandler= (e)=>{
+  const formHandler = (e) => {
     e.preventDefault();
-    setImages([])
-    setQuery(value)
-    setValue("")
+    setImages([]);
+    setQuery(value);
+    setValue("");
 
-    
-
-  }
+  };
 
   return (
     <HeroSec>
@@ -80,8 +78,12 @@ const HeroSection = ({setQuery,setImages}) => {
       </p>
       <Form onSubmit={formHandler}>
         <InputWrapper className="col-12 col-sm-12 col-md-10 col-lg-7">
-          <SearchBar placeholder="Search Images Here...." value={value} onChange={(e)=>setValue(e.target.value)} />
-          <Button type="submit" >
+          <SearchBar
+            placeholder="Search Images Here...."
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <Button type="submit">
             <RiSearch2Line />
           </Button>
         </InputWrapper>
